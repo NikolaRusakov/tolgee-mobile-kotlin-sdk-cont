@@ -69,7 +69,9 @@ gradlePlugin {
 
 mavenPublishing {
     publishToMavenCentral(automaticRelease = true)
-    signAllPublications()
+    if (providers.gradleProperty("signing.keyId").isPresent) {
+        signAllPublications()
+    }
 
     coordinates(
         groupId = libGroup,
