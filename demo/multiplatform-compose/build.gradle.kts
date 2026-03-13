@@ -28,7 +28,7 @@ kotlin {
 
     jvm {
         compilations.all {
-            compilerOptions {
+            compilerOptions.configure {
                 jvmTarget.set(JvmTarget.JVM_17)
             }
         }
