@@ -5,6 +5,7 @@ import kotlinx.serialization.Serializable
 import nl.adaptivity.xmlutil.serialization.XmlValue
 import io.tolgee.model.TolgeeKey
 import nl.adaptivity.xmlutil.serialization.XML
+import kotlinx.serialization.modules.EmptySerializersModule
 
 // ---------------------------------------------------------------------------
 // XML data-class model
@@ -105,7 +106,7 @@ fun decodeAndroidXml(
   xmlContent: String,
   languageCode: String = "default",
 ): List<TolgeeKey> {
-  val xml = XML {
+  val xml = XML(EmptySerializersModule()) {
     // Be lenient about unknown attributes (e.g. `formatted="false"`)
 //    unknownChildHandler = { _, _, _, _, _ -> }
   }

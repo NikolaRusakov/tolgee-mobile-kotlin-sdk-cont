@@ -62,7 +62,6 @@ internal interface TolgeeTranslation {
         ): TolgeeTranslation = when (formatter) {
             is Tolgee.Formatter.ICU -> TranslationICU(keys)
             is Tolgee.Formatter.Sprintf -> TranslationSprintf(keys, usedLocale)
-            else -> TranslationEmpty
         }
     }
 }
