@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/app_name_text"
-            android:text="@string/app_name"
+            android:text="@string/scan_code"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginBottom="24dp" />
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/basic_text"
-            android:text="@string/description"
+            android:text="@string/auto_rotate"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginBottom="24dp" />
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/parameterized_text"
-            android:text="@string/percentage_placeholder"
+            android:text="@string/automated_action_list_intent"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginBottom="24dp" />
@@ -67,8 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:id="@+id/button_fr"
-            android:text="French"
+            android:id="@+id/button_de"
+            android:text="German"
             android:textAlignment="center" />
 
     <Button
