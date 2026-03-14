@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
  *                        and the value is a `Translation`.
  */
 @Serializable
-internal data class TolgeeKey(
+data class TolgeeKey(
     @SerialName("keyName") val keyName: String,
     @SerialName("translations") val translations: Map<String, Data>
 ) {
