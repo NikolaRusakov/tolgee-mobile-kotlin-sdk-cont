@@ -12,7 +12,7 @@ android {
 
   defaultConfig {
     applicationId = "io.tolgee.demo.exampleandroid"
-    minSdk = 21
+    minSdk = 24
     targetSdk = 36
     versionCode = 1
     versionName = "1.0"
@@ -28,8 +28,8 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
 }
 
@@ -54,6 +54,8 @@ kotlin {
 dependencies {
   implementation(libs.android)
   implementation(libs.activity)
+  implementation("androidx.appcompat:appcompat:1.7.0")
+  implementation("androidx.preference:preference-ktx:1.2.1")
 
   implementation(libs.coroutines.android)
   implementation(project(":core"))
