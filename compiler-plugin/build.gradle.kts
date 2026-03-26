@@ -21,6 +21,11 @@ dokka {
             remoteUrl("https://github.com/tolgee/tolgee-mobile-kotlin-sdk/tree/master/compiler-plugin/src")
         }
     }
+    pluginsConfiguration.html {
+//        customStyleSheets.from("styles.css")
+        customAssets.from("./docs/tolgeeLogo.svg")
+        footerMessage.set("© 2021-2026 Tolgee s.r.o. All rights reserved")
+    }
 }
 
 dependencies {
