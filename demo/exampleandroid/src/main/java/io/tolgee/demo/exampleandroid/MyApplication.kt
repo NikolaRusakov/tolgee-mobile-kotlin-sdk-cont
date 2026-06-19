@@ -21,7 +21,7 @@ class MyApplication : Application() {
     Tolgee.init {
       contentDelivery {
         url = "https://cdn.tolg.ee/dbbedc13592d9ea9945332d83c1dc800"
-        path = { "values-$it/strings.xml" }
+        path = { "$it.json" }
         storage = TolgeeStorageProviderAndroid(this@MyApplication, BuildConfig.VERSION_CODE)
         availableLocales(availableLocales)
       }

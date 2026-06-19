@@ -218,8 +218,6 @@ kotlin {
             implementation(libs.i18n4k.plural)
             implementation(libs.datetime)
             implementation(libs.coroutines)
-            implementation(libs.xmlutil.core)
-            implementation(libs.xmlutil.serialization)
         }
 
         commonTest.dependencies {

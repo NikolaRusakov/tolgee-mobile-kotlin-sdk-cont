@@ -11,7 +11,6 @@ import io.ktor.http.*
 import io.ktor.utils.io.core.toByteArray
 import io.tolgee.Tolgee
 import io.tolgee.common.keyData
-import io.tolgee.common.parseAndroidXml
 import io.tolgee.model.TolgeeKey
 import io.tolgee.model.TolgeeManifest
 import io.tolgee.model.TolgeeTranslation
@@ -132,21 +131,11 @@ internal data object TolgeeApi {
     language: String,
     path: String
   ): TolgeeTranslation? {
-    val keys: List<TolgeeKey> = when {
-      path.endsWith(".json", ignoreCase = true) -> {
-        suspendCatching {
-          json.decodeFromString<Map<String, JsonElement>>(this@decodeTranslation)
-        }.getOrNull()?.map { (key, value) ->
-          TolgeeKey(keyName = key, translations = mapOf(language to value.keyData()))
-        } ?: return null
-      }
-
-      path.endsWith(".xml", ignoreCase = true) -> {
-        this@decodeTranslation.parseAndroidXml(language)
-      }
-
-      else -> return null
-    }
+    val keys: List<TolgeeKey> = suspendCatching {
+      json.decodeFromString<Map<String, JsonElement>>(this@decodeTranslation)
+    }.getOrNull()?.map { (key, value) ->
+      TolgeeKey(keyName = key, translations = mapOf(language to value.keyData()))
+    } ?: return null
 
     if (keys.isEmpty()) return null
 
