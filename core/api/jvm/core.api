@@ -192,6 +192,127 @@ public final class io/tolgee/common/PlatformTolgee : io/tolgee/Tolgee {
 	public fun toString ()Ljava/lang/String;
 }
 
+public final class io/tolgee/model/TolgeeKey {
+	public static final field Companion Lio/tolgee/model/TolgeeKey$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/String;Ljava/util/Map;)Lio/tolgee/model/TolgeeKey;
+	public static synthetic fun copy$default (Lio/tolgee/model/TolgeeKey;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lio/tolgee/model/TolgeeKey;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getKeyName ()Ljava/lang/String;
+	public final fun getTranslations ()Ljava/util/Map;
+	public fun hashCode ()I
+	public final fun isArray ()Z
+	public final fun isPlural ()Z
+	public final fun isText ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/tolgee/model/TolgeeKey$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/tolgee/model/TolgeeKey$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/tolgee/model/TolgeeKey;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/tolgee/model/TolgeeKey;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract interface class io/tolgee/model/TolgeeKey$Data {
+	public static final field Companion Lio/tolgee/model/TolgeeKey$Data$Companion;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Array : io/tolgee/model/TolgeeKey$Data {
+	public static final field Companion Lio/tolgee/model/TolgeeKey$Data$Array$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lio/tolgee/model/TolgeeKey$Data$Array;
+	public static synthetic fun copy$default (Lio/tolgee/model/TolgeeKey$Data$Array;Ljava/util/List;ILjava/lang/Object;)Lio/tolgee/model/TolgeeKey$Data$Array;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArray ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/tolgee/model/TolgeeKey$Data$Array$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/tolgee/model/TolgeeKey$Data$Array$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/tolgee/model/TolgeeKey$Data$Array;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/tolgee/model/TolgeeKey$Data$Array;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Array$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Plural : io/tolgee/model/TolgeeKey$Data {
+	public static final field Companion Lio/tolgee/model/TolgeeKey$Data$Plural$Companion;
+	public fun <init> (Ljava/util/Map;)V
+	public final fun component1 ()Ljava/util/Map;
+	public final fun copy (Ljava/util/Map;)Lio/tolgee/model/TolgeeKey$Data$Plural;
+	public static synthetic fun copy$default (Lio/tolgee/model/TolgeeKey$Data$Plural;Ljava/util/Map;ILjava/lang/Object;)Lio/tolgee/model/TolgeeKey$Data$Plural;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPlurals ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/tolgee/model/TolgeeKey$Data$Plural$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/tolgee/model/TolgeeKey$Data$Plural$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/tolgee/model/TolgeeKey$Data$Plural;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/tolgee/model/TolgeeKey$Data$Plural;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Plural$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Text : io/tolgee/model/TolgeeKey$Data {
+	public static final field Companion Lio/tolgee/model/TolgeeKey$Data$Text$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lio/tolgee/model/TolgeeKey$Data$Text;
+	public static synthetic fun copy$default (Lio/tolgee/model/TolgeeKey$Data$Text;Ljava/lang/String;ILjava/lang/Object;)Lio/tolgee/model/TolgeeKey$Data$Text;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class io/tolgee/model/TolgeeKey$Data$Text$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/tolgee/model/TolgeeKey$Data$Text$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/tolgee/model/TolgeeKey$Data$Text;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/tolgee/model/TolgeeKey$Data$Text;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/tolgee/model/TolgeeKey$Data$Text$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public abstract interface class io/tolgee/model/TolgeeMessageParams : de/comahe/i18n4k/messages/formatter/MessageParameters {
 	public abstract fun get (Ljava/lang/CharSequence;)Ljava/lang/Object;
 }
