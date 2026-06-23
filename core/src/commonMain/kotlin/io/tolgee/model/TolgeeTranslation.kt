@@ -2,7 +2,6 @@ package io.tolgee.model
 
 import de.comahe.i18n4k.Locale
 import io.tolgee.Tolgee
-import io.tolgee.model.translation.TranslationEmpty
 import io.tolgee.model.translation.TranslationICU
 import io.tolgee.model.translation.TranslationSprintf
 import kotlinx.collections.immutable.ImmutableList
@@ -62,7 +61,6 @@ internal interface TolgeeTranslation {
         ): TolgeeTranslation = when (formatter) {
             is Tolgee.Formatter.ICU -> TranslationICU(keys)
             is Tolgee.Formatter.Sprintf -> TranslationSprintf(keys, usedLocale)
-            else -> TranslationEmpty
         }
     }
 }
