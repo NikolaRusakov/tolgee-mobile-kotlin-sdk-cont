@@ -53,12 +53,17 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 }
 
 dokka {
+    moduleName.set("Tolgee Mobile Kotlin SDK")
     dokkaPublications.html {
         suppressInheritedMembers.set(true)
         failOnWarning.set(true)
     }
+    // Configured here only: the root project governs the aggregated publication.
     pluginsConfiguration.html {
-        customAssets.from("docs/tolgeeLogo.svg")
+        // Must be named logo-icon.svg — Dokka hardcodes that path for the nav logo and the favicon.
+        customAssets.from("docs/logo-icon.svg")
+        customStyleSheets.from("docs/tolgee.css")
+        homepageLink.set("https://tolgee.io/")
         footerMessage.set("© 2021-2026 Tolgee s.r.o. All rights reserved")
     }
 }
