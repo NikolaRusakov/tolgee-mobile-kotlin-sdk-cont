@@ -120,6 +120,10 @@ class MyApplication : Application() {
 - Step-by-step recipes for installing the SDK and migrating an existing app, with a copy-paste prompt for
   Claude Code, Cursor, Copilot or Codex: https://docs.tolgee.io/android-sdk/agents
 - Agent Skill for consumer projects: [`skills/tolgee-android-sdk/SKILL.md`](./skills/tolgee-android-sdk/SKILL.md)
+- Context7: `context7.json` describes what to index and the rules agents should follow; submit the repository once at
+  https://context7.com/add-library so agents using the Context7 MCP can resolve `tolgee-mobile-kotlin-sdk`.
+- Tolgee MCP server: agents can sync keys and translations of your project directly, see
+  https://docs.tolgee.io/platform/integrations/mcp_server/about
 
 ## Example Projects
 

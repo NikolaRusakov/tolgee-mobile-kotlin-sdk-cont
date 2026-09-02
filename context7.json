@@ -1,0 +1,33 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Tolgee Mobile Kotlin SDK",
+  "description": "Kotlin Multiplatform SDK for over-the-air translations from the Tolgee Platform: Android Views integration (context wrapper, resource-id lookups), Jetpack Compose and Compose Multiplatform helpers, CDN loading with caching and BCP 47 locale fallback.",
+  "folders": ["core", "compose", "skills", "demo"],
+  "excludeFolders": [
+    "compiler-plugin",
+    "gradle-plugin",
+    "buildSrc",
+    "build",
+    "demo/exampleandroid/build",
+    "demo/examplejetpack/build",
+    "demo/multiplatform-compose/build",
+    "core/build",
+    "compose/build",
+    ".gradle",
+    ".github",
+    ".claude",
+    "docs"
+  ],
+  "excludeFiles": ["gradlew", "gradlew.bat", "LICENSE"],
+  "rules": [
+    "Maven coordinates: io.tolgee.mobile-kotlin-sdk:core (Android Views / plain Kotlin) and io.tolgee.mobile-kotlin-sdk:compose (Jetpack Compose, Compose Multiplatform; includes core). Resolve the version from Maven Central.",
+    "Initialize once in Application.onCreate() with Tolgee.init { contentDelivery { url = \"https://cdn.tolg.ee/<prefix>\"; storage = TolgeeStorageProviderAndroid(app, BuildConfig.VERSION_CODE) } }; never in an Activity, Fragment or composable.",
+    "The Content Delivery must use the 'Android SDK' (JSON) export format; the default path is \"$it.json\" and the default formatter is Tolgee.Formatter.Sprintf. The SDK cannot parse strings.xml.",
+    "Android Views: override attachBaseContext(TolgeeContextWrapper.wrap(newBase)) in every Activity so getString and XML layouts resolve through Tolgee; outside Activities use context.getStringT(...) or Tolgee.instance.t(context, R.string.key, args).",
+    "Compose: import stringResource, pluralStringResource and stringArrayResource from package io.tolgee instead of androidx.compose.ui.res; they fall back to bundled resources when Tolgee is not initialized.",
+    "Keys are Android resource entry names (R.string.welcome_message -> welcome_message); keep strings.xml as the offline fallback.",
+    "Translations load asynchronously: call preload(lifecycleOwner) or collect tFlow/changeFlow; setLocale() alone does not fetch.",
+    "Task recipes for agents: https://docs.tolgee.io/android-sdk/agents (Markdown index https://docs.tolgee.io/llms.txt); API reference for agents: https://tolgee.github.io/tolgee-mobile-kotlin-sdk/llms.txt."
+  ],
+  "previousVersions": []
+}

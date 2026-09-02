@@ -38,6 +38,11 @@ source of truth; every page has a Markdown twin (append `.md`) and the site publ
    touch before editing.
 3. **Collect inputs** from the user: the Content Delivery URL prefix (format **Android SDK**, serves `<tag>.json`) and
    the published locales. Never ask for or commit a Tolgee API key; the CLI reads it from `tolgee login`.
+   If a **Tolgee MCP server** is connected (`https://app.tolgee.io/mcp/developer`, header `X-API-Key`; setup at
+   https://docs.tolgee.io/platform/integrations/mcp_server/setup.md), use it read-only first (`list_projects`,
+   `list_keys`, `get_translations`) to confirm the app's resource names exist as keys, create only the missing keys,
+   and confirm with the user before batch or delete operations. The MCP server does not create Content Deliveries.
+   If the Context7 MCP is available, resolve `tolgee-mobile-kotlin-sdk` there as a second documentation source.
 4. **Follow the recipe steps literally**: dependency → network security config → `Tolgee.init` in
    `Application.onCreate()` → context wrapping (Views) or `io.tolgee` imports (Compose) → reactive updates.
 5. **Migrate pattern by pattern** using the inventory commands in the migration recipe; keep `strings.xml` and the

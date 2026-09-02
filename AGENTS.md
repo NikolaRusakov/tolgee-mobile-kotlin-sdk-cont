@@ -133,7 +133,9 @@ Gradle plugin id; replace `DokkaMarkdownPlugin` with the official plugin once on
 
 Task-oriented guides for the SDK (install, migrate an app, diagnostics) and copy-paste prompts for coding agents live in
 the documentation site: https://docs.tolgee.io/android-sdk/agents (Markdown index: https://docs.tolgee.io/llms.txt).
-`skills/tolgee-android-sdk/SKILL.md` packages the same guidance as an Agent Skill for consumer projects.
+`skills/tolgee-android-sdk/SKILL.md` packages the same guidance as an Agent Skill for consumer projects, and
+`context7.json` tells Context7 which folders to index and which rules to surface (registration is a one-time manual
+submission at https://context7.com/add-library).
 
 ## Publishing
 
