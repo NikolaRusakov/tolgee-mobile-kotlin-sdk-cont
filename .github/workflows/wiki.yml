@@ -29,13 +29,18 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      # HTML reference + Markdown mirror (/markdown/**.md) + llms.txt / llms-full.txt for LLM agents.
+      # The Markdown base URL is the GitHub Pages project URL, so llms.txt links are absolute.
       - name: Generate Wiki
-        run: ./gradlew dokkaGenerate
+        run: |
+          OWNER="$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
+          REPO="${GITHUB_REPOSITORY#*/}"
+          ./gradlew dokkaSite "-Pdokka.llms.markdownBaseUrl=https://${OWNER}.github.io/${REPO}/markdown/"
 
       - name: Upload Wiki
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/dokka/html
+          path: ./build/dokka/site
 
   deploy:
     needs: build

@@ -111,6 +111,16 @@ class MyApplication : Application() {
 }
 ```
 
+## API reference and docs for AI agents
+
+- API reference (KDoc): https://tolgee.github.io/tolgee-mobile-kotlin-sdk/
+  - Markdown twin of every page under `/markdown/`, plus [`llms.txt`](https://tolgee.github.io/tolgee-mobile-kotlin-sdk/llms.txt)
+    and [`llms-full.txt`](https://tolgee.github.io/tolgee-mobile-kotlin-sdk/llms-full.txt) for LLM coding agents.
+  - Build locally with `./gradlew dokkaSite` (output in `build/dokka/site`).
+- Step-by-step recipes for installing the SDK and migrating an existing app, with a copy-paste prompt for
+  Claude Code, Cursor, Copilot or Codex: https://docs.tolgee.io/android-sdk/agents
+- Agent Skill for consumer projects: [`skills/tolgee-android-sdk/SKILL.md`](./skills/tolgee-android-sdk/SKILL.md)
+
 ## Example Projects
 
 For complete examples of how to use the Tolgee SDK, check out the demo projects:
