@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Static text: translated during inflation by the Tolgee context wrapper and refreshed by retranslate(). -->
+    <TextView
+        android:id="@+id/text_static"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="20sp" />
+
+    <!-- Text with format arguments: the inflater skips it on purpose; MainActivity binds it with bindTolgee(). -->
+    <TextView
+        android:id="@+id/text_parameterized"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        tools:text="Parameterized Text 87" />
+
+    <!-- Plural driven by ViewModel state: bindTolgeePlural(). -->
+    <TextView
+        android:id="@+id/text_plural"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        tools:text="Tests: 1 test out of 10 ok" />
+
+    <!-- String array: bindTolgeeArray(). -->
+    <TextView
+        android:id="@+id/text_array"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        tools:text="First, Second, Third" />
+
+    <Button
+        android:id="@+id/button_next_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/action_next_result" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <!-- Language names are deliberately not translated: they must stay readable in any locale. -->
+        <Button
+            android:id="@+id/button_en"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="English" />
+
+        <Button
+            android:id="@+id/button_cs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Čeština" />
+
+        <Button
+            android:id="@+id/button_fr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Français" />
+    </LinearLayout>
+
+</LinearLayout>

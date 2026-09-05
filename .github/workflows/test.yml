@@ -28,3 +28,24 @@ jobs:
 
       - name: Test Gradle Plugin
         run: ./gradlew gradle-plugin:test
+
+  starters:
+    name: Build starter apps
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      # The starters are the reference integrations documented on docs.tolgee.io.
+      # They compile against the in-repo modules, so an API change that breaks a consumer breaks here.
+      - name: Assemble starters
+        run: ./gradlew :starters:android-views:assembleDebug :starters:jetpack-compose:assembleDebug

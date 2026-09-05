@@ -125,6 +125,13 @@ class MyApplication : Application() {
 - Tolgee MCP server: agents can sync keys and translations of your project directly, see
   https://docs.tolgee.io/platform/integrations/mcp_server/about
 
+## Starters
+
+The fastest correct integration, ready to copy: [`starters/android-views`](./starters/android-views)
+(Activity + ViewModel + XML) and [`starters/jetpack-compose`](./starters/jetpack-compose). The
+[playbook](./starters/README.md) goes from clone to a translation arriving over the air in under 30 minutes and
+explains the Content Delivery configuration and the Views reactivity helpers.
+
 ## Example Projects
 
 For complete examples of how to use the Tolgee SDK, check out the demo projects:

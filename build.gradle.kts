@@ -28,6 +28,9 @@ apiValidation {
     ignoredProjects.add("multiplatform-compose")
     ignoredProjects.add("exampleandroid")
     ignoredProjects.add("examplejetpack")
+    ignoredProjects.add("starters")
+    ignoredProjects.add("android-views")
+    ignoredProjects.add("jetpack-compose")
 }
 
 dependencies {

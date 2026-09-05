@@ -32,4 +32,7 @@ include(":gradle-plugin")
 
 include(":demo:multiplatform-compose", ":demo:exampleandroid", ":demo:examplejetpack")
 
+// Reference integrations that consumers copy; built in CI so they track the SDK API.
+include(":starters:android-views", ":starters:jetpack-compose")
+
 rootProject.name = "tolgee-mobile-kotlin-sdk"

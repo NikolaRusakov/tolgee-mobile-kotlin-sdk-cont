@@ -12,8 +12,14 @@ tolgee-mobile-kotlin-sdk/
 ├── compose/           # Compose Multiplatform integration
 ├── compiler-plugin/   # Kotlin compiler plugin (currently disabled)
 ├── gradle-plugin/     # Gradle plugin for project integration
-└── demo/              # Example apps (Android Views, Jetpack Compose, KMP Compose)
+├── demo/              # Example apps (Android Views, Jetpack Compose, KMP Compose)
+└── starters/          # Reference integrations consumers copy (Views + ViewModel, Compose); see starters/README.md
 ```
+
+The starters are the source of truth for the integration docs on docs.tolgee.io: their files are the
+snippets, their README is the playbook, and CI (`test.yml`, job `starters`) assembles both apps on every push.
+Keep them minimal — no DI, navigation or theming — and keep `starters/android-views/TolgeeBinding.kt`
+in step with the `tFlow` / `tPluralFlow` / `tArrayFlow` / `changeFlow` API.
 
 The compiler plugin is commented out in `settings.gradle.kts` (broken after Kotlin 2.2).
 
@@ -23,6 +29,7 @@ The compiler plugin is commented out in `settings.gradle.kts` (broken after Kotl
 ./gradlew :core:build
 ./gradlew :compose:build
 ./gradlew :gradle-plugin:build
+./gradlew :starters:android-views:assembleDebug :starters:jetpack-compose:assembleDebug   # reference apps
 ```
 
 ## Testing
