@@ -26,7 +26,7 @@ Times are for someone who has never used Tolgee. Steps 1–3 happen in the Tolge
 | 5 | **Build and run** | `./gradlew :starters:android-views:installDebug` (or `:starters:jetpack-compose:installDebug`) | First frame shows bundled text, CDN text replaces it within a second |
 | 6 | **Prove it is over the air** | Change one translation in the platform, wait for publish (auto-publish is quick; the CDN edge caches up to ~15 min), reopen the screen | New text, same APK |
 | 7 | **Switch locale** | Tap a language button | Static, parameterised, plural and array texts all change; nothing recreates |
-| 8 | **Port to your app** | Copy the files listed above; replace `project(":core")` with `io.tolgee.mobile-kotlin-sdk:core:<version>` (or `:compose`). Migration guide: https://docs.tolgee.io/android-sdk/agents/migrate-strings | `./gradlew assembleDebug` green, one string from the CDN, a locale switch without a crash |
+| 8 | **Port to your app** | Copy the files listed above; replace `project(":core")` with `io.tolgee.mobile-kotlin-sdk:core:<version>` (or `:compose`). Migration guide: https://docs.tolgee.io/android-sdk/migrate-existing-app | `./gradlew assembleDebug` green, one string from the CDN, a locale switch without a crash |
 
 ## Content Delivery configuration, in one place
 
@@ -78,6 +78,6 @@ integration; everything else is a plain Android project.
 
 ## Related
 
-- Android SDK docs and recipes for humans and coding agents: https://docs.tolgee.io/android-sdk/agents
+- Android SDK docs: https://docs.tolgee.io/android-sdk (guide for coding agents: https://docs.tolgee.io/android-sdk/agents)
 - API reference (Markdown twin and `llms.txt` for agents): https://tolgee.github.io/tolgee-mobile-kotlin-sdk/
 - Agent Skill packaging the same rules: [`../skills/tolgee-android-sdk/SKILL.md`](../skills/tolgee-android-sdk/SKILL.md)

@@ -21,10 +21,11 @@ source of truth; every page has a Markdown twin (append `.md`) and the site publ
 
 - Docs index: https://docs.tolgee.io/llms.txt (Android SDK recipes are the first section)
 - Recipes:
-  - https://docs.tolgee.io/android-sdk/agents/index.md (facts agents get wrong, prompt, AGENTS.md snippet)
-  - https://docs.tolgee.io/android-sdk/agents/install-views.md
-  - https://docs.tolgee.io/android-sdk/agents/install-compose.md
-  - https://docs.tolgee.io/android-sdk/agents/migrate-strings.md
+  - https://docs.tolgee.io/android-sdk/agents.md (facts agents get wrong, prompt, AGENTS.md snippet)
+  - https://docs.tolgee.io/android-sdk/content-delivery.md
+  - https://docs.tolgee.io/android-sdk/integrations/android-views/installation.md
+  - https://docs.tolgee.io/android-sdk/integrations/jetpack-compose/installation.md
+  - https://docs.tolgee.io/android-sdk/migrate-existing-app.md
   - https://docs.tolgee.io/android-sdk/agents/diagnostics.md
 - API reference for any class or member: https://tolgee.github.io/tolgee-mobile-kotlin-sdk/llms.txt
   (full text: https://tolgee.github.io/tolgee-mobile-kotlin-sdk/llms-full.txt)
