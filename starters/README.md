@@ -78,6 +78,5 @@ integration; everything else is a plain Android project.
 
 ## Related
 
-- Android SDK docs: https://docs.tolgee.io/android-sdk (guide for coding agents: https://docs.tolgee.io/android-sdk/agents)
-- API reference (Markdown twin and `llms.txt` for agents): https://tolgee.github.io/tolgee-mobile-kotlin-sdk/
-- Agent Skill packaging the same rules: [`../skills/tolgee-android-sdk/SKILL.md`](../skills/tolgee-android-sdk/SKILL.md)
+- Android SDK docs: https://docs.tolgee.io/android-sdk
+- API reference (KDoc, with a Markdown copy of every page and `llms.txt`): https://tolgee.github.io/tolgee-mobile-kotlin-sdk/
