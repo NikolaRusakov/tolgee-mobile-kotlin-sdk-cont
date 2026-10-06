@@ -17,7 +17,6 @@ class MainActivity : ComponentActivity() {
 
   override fun attachBaseContext(newBase: Context?) {
     // Wrapping base context will make sure getString calls will use tolgee
-    // even for instances which cannot be replaced automatically by the compiler
     super.attachBaseContext(TolgeeContextWrapper.wrap(newBase))
   }
 
